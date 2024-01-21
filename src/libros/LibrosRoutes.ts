@@ -1,12 +1,16 @@
 import express from "express";
+import { obtenerLibros, obtenerLibrosPorID } from "./LibrosController";
 
 
 
- const routerLibros = express.Router();
+  const routerLibros = express.Router();
 
-    routerLibros.get('/libros',(req,res)  => {
+    routerLibros.get('/libros',obtenerLibros);
 
-    })
+    routerLibros.get('/libros/:id',obtenerLibrosPorID);
+
+
+
 
 
 
